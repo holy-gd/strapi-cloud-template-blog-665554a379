@@ -1,0 +1,109 @@
+{
+  "kind": "collectionType",
+  "collectionName": "opera_performances",
+  "info": {
+    "singularName": "opera-performance",
+    "pluralName": "opera-performances",
+    "displayName": "Opera performance",
+    "description": "Stores rich content for opera program pages"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "composer": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "mainMediaGallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images", "files", "videos"],
+      "required": true
+    },
+    "venue": {
+      "type": "string",
+      "required": true
+    },
+    "languages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "opera.list-item"
+    },
+    "subtitles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "opera.list-item"
+    },
+    "ageRate": {
+      "type": "string"
+    },
+    "durationMinutes": {
+      "type": "integer"
+    },
+    "parts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "opera.part"
+    },
+    "tickets": {
+      "type": "component",
+      "repeatable": true,
+      "component": "opera.ticket"
+    },
+    "secondaryLibrary": {
+      "type": "component",
+      "repeatable": true,
+      "component": "opera.secondary-media"
+    },
+    "creators": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::person.person",
+      "inversedBy": "creatorPerformances"
+    },
+    "creatorsSectionLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "opera.section-link"
+    },
+    "conductorCast": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::person.person",
+      "inversedBy": "castPerformances"
+    },
+    "conductorCastSectionLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "opera.section-link"
+    },
+    "dancers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::person.person",
+      "inversedBy": "dancerPerformances"
+    },
+    "dancersSectionLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "opera.section-link"
+    },
+    "notes": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "people",
+  "info": {
+    "singularName": "person",
+    "pluralName": "people",
+    "displayName": "Person",
+    "description": "People involved in opera performances"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "biography": {
+      "type": "richtext"
+    },
+    "creatorPerformances": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::opera-performance.opera-performance",
+      "mappedBy": "creators"
+    },
+    "castPerformances": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::opera-performance.opera-performance",
+      "mappedBy": "conductorCast"
+    },
+    "dancerPerformances": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::opera-performance.opera-performance",
+      "mappedBy": "dancers"
+    }
+  }
+}

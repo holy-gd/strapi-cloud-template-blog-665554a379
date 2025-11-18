@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_opera_tickets",
+  "info": {
+    "displayName": "Ticket option",
+    "description": "Upcoming performance schedule entry",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "startTime": {
+      "type": "time",
+      "required": true
+    },
+    "startingPrice": {
+      "type": "integer"
+    },
+    "accessible": {
+      "type": "boolean",
+      "default": false
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

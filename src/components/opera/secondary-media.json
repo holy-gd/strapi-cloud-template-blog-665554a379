@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_opera_secondary_media",
+  "info": {
+    "displayName": "Secondary media",
+    "description": "Image tile with optional CTA",
+    "icon": "image"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "allowedTypes": ["images", "files", "videos"],
+      "multiple": false,
+      "required": true
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "ctaUrl": {
+      "type": "string"
+    }
+  }
+}

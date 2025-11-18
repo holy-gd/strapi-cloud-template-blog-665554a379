@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_opera_parts",
+  "info": {
+    "displayName": "Performance part",
+    "description": "Represents a named section or break",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "duration": {
+      "type": "integer",
+      "required": true
+    },
+    "isBreak": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
