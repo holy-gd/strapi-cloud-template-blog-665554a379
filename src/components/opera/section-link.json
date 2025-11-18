@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_opera_section_links",
+  "info": {
+    "displayName": "Section link",
+    "description": "Optional CTA and badge for a people section",
+    "icon": "external-link-alt"
+  },
+  "options": {},
+  "attributes": {
+    "ctaLabel": {
+      "type": "string",
+      "default": "View All"
+    },
+    "ctaUrl": {
+      "type": "string"
+    },
+    "extraCount": {
+      "type": "integer"
+    }
+  }
+}
