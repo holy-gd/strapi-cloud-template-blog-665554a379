@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": "Relevant shop items linked to performances"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "url": {
+      "type": "string"
+    },
+    "performances": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::opera-performance.opera-performance",
+      "mappedBy": "relevantProducts"
+    }
+  }
+}

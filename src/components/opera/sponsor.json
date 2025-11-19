@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_opera_sponsors",
+  "info": {
+    "displayName": "Sponsor",
+    "description": "Single sponsor entry",
+    "icon": "hand-holding-heart"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "logo": {
+      "type": "media",
+      "allowedTypes": ["images"],
+      "multiple": false,
+      "required": true
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

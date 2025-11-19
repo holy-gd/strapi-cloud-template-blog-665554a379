@@ -69,6 +69,30 @@
       "repeatable": true,
       "component": "opera.secondary-media"
     },
+    "mainSponsors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sponsor-group.sponsor-group",
+      "inversedBy": "mainSponsorPerformances"
+    },
+    "sponsors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sponsor-group.sponsor-group",
+      "inversedBy": "sponsorPerformances"
+    },
+    "mediaSponsors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sponsor-group.sponsor-group",
+      "inversedBy": "mediaSponsorPerformances"
+    },
+    "relevantProducts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "performances"
+    },
     "creators": {
       "type": "relation",
       "relation": "manyToMany",
