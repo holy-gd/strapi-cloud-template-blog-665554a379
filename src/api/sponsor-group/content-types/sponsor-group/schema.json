@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sponsor_groups",
+  "info": {
+    "singularName": "sponsor-group",
+    "pluralName": "sponsor-groups",
+    "displayName": "Sponsor group",
+    "description": "Reusable grouping of sponsors for performances"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": ["big-with-title", "small-with-title", "small-no-title"],
+      "default": "small-with-title"
+    },
+    "sponsors": {
+      "type": "component",
+      "repeatable": true,
+      "component": "opera.sponsor",
+      "required": true
+    },
+    "mainSponsorPerformances": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::opera-performance.opera-performance",
+      "mappedBy": "mainSponsors"
+    },
+    "sponsorPerformances": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::opera-performance.opera-performance",
+      "mappedBy": "sponsors"
+    },
+    "mediaSponsorPerformances": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::opera-performance.opera-performance",
+      "mappedBy": "mediaSponsors"
+    }
+  }
+}
