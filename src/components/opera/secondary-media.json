@@ -10,7 +10,7 @@
     "image": {
       "type": "media",
       "allowedTypes": ["images", "files", "videos"],
-      "multiple": false,
+      "multiple": true,
       "required": true
     },
     "ctaLabel": {
